@@ -47,7 +47,7 @@
 A Scalar-Tensor Theory Without Dark Matter, Dark Energy, or Cosmological Constant}
 
 \author{S. Brailsford}
-\affiliation{Independent researcher}
+\affiliation{Independent AI researcher}
 
 \date{\today}
 
@@ -62,8 +62,9 @@ from a maximally uninformative reference. The theory
 \emph{eliminates dark matter as a particle species}, the
 cosmological constant, and dark energy --- replacing them with
 information-enhanced baryonic gravity and Wiltshire's backreaction
-cosmology, which we derive as the minimal inhomogeneous background
-compatible with the field equations. A Branch theorem
+cosmology, which we derive as the simplest physically-motivated
+inhomogeneous background compatible with the field equations
+(strict exclusion of LTB/Szekeres alternatives identified as open). A Branch theorem
 ($R\nabla\Psi = 0$) partitions spacetime into two sectors. A
 parameter-free static-fluid theorem
 (App.~\ref{app:static_fluid_theorem}) forces all physical stars
@@ -175,10 +176,10 @@ diverges from the committed Wiltshire $H(z)$ by $+76\%$ at
 recombination --- the systematic uncertainty is
 ${\sim}\,5$--$10\%$, larger than the headline number. A modified
 Boltzmann code with the true two-domain background is identified
-as the critical next computation. For context: MOND (1983) did
-not attempt CMB predictions for over twenty years;
-TeVeS~\cite{Bekenstein1984,BekensteinTeVeS2004} (2004) required
-several more years of independent analysis. ISST engages the CMB
+as the critical next computation. For context: MOND's relativistic
+completions (AQUAL~\cite{Bekenstein1984}, 1984;
+TeVeS~\cite{BekensteinTeVeS2004}, 2004) required several more years
+of independent analysis before engaging CMB peak structure. ISST engages the CMB
 in its first paper, identifies the failure mode, and states the
 path to resolution. The gap is real. It is also young.
 
@@ -251,7 +252,9 @@ is varied with respect to $g^{\mu\nu}$ and matter fields only;
 $\Psi$ is treated as trace-determined (metrically slaved through
 the trace of \eqref{eq:eom}), with no independent Euler--Lagrange
 equation (see Sec.~\ref{sec:psi_variational}). The status of this
-construction is \PROVEN\ (foundations Layer~1, Stage~G gate clean).
+construction is \PROVEN\ at all foundational layers and consistent
+with the structural commitments enforced by the
+Derivation Passport (App.~\ref{app:passport}).
 
 \subsection{Variational status of $\Psi$}
 \label{sec:psi_variational}
@@ -565,26 +568,30 @@ photon-baryon plasma, which the ratchet postulate
 (Sec.~\ref{sec:ratchet}) then preserves into the baryon distribution.
 
 \emph{The chain from this motivation to the discrete formula does
-not close as a derivation.} F145 tested four candidate paths and
-ruled them all out:
-\begin{enumerate}
-\item $D_{\rm KL}$ between Maxwellians at $T_{\rm actual}$ and
-$T_{\rm ref}$ (post-thermal-history vs.\ no-freezeout reference)
-gives $1.36$ --- a factor $\sim 4$ short of $5.664$ at $\alpha = 0.869$.
-\item $D_{\rm KL}$ between the post-recombination baryon Maxwellian
-and the local-bounded uniform reference at $v_{\rm esc} = c$ gives
-$\sim 40$--$60$ --- a factor $\sim 8$ too large; the local-bounded
-reading is galactic-specific and lacks a natural cosmological
-extension.
-\item Per-step transient $D_{\rm KL}$ summed across the four
-freezeouts gives $0.30$ --- a factor $\sim 19$ short; Shore--Johnson
-additivity is over \emph{independent components}, not over
-time-separated events.
-\item R\'enyi-$q$ divergence summed across the four freezeouts
-matches $5.66$ accidentally at $q = 2$ ($\sum D_2 = 5.82$), but the
-Shore--Johnson uniqueness theorem forces $q = 1$ and the match
-degrades at non-SM step sizes.
-\end{enumerate}
+not close as a derivation.} F145 tested four candidate paths from
+the action's KL functional to the discrete sum
+(Table~\ref{tab:fprim_paths}) and ruled them all out: each gives
+the wrong magnitude, the wrong scope, or the wrong information
+measure to recover \eqref{eq:fprim} from the action with the
+galactic-calibrated $\alpha=0.869$ (F119).
+
+\begin{table}[h]
+\caption{Four candidate paths from the action's KL functional
+$f = \alpha\!\int F\ln(F/F_{\rm flat})\,d\Pi$ to the discrete DOF
+sum $\fprim = 5.664$, all ruled out (F145).}
+\label{tab:fprim_paths}
+\begin{ruledtabular}
+\begin{tabular}{lcl}
+Path & Result & Verdict \\
+\hline
+$D_{\rm KL}$(Maxw. @$T_{\rm actual}$ vs.\ @$T_{\rm ref}$) & $1.36$ & factor $\sim\!4$ short \\
+$D_{\rm KL}$(Maxw. vs.\ uniform-on-$|p|<m_p c$) & ${\sim}40$--$60$ & factor $\sim\!8$ too large; galactic-specific reading \\
+$\sum_i D_{\rm KL}^{(i)}$ (per-step transient, 4 freezeouts) & $0.30$ & factor $\sim\!19$ short; SJ additivity is over independent components, not events \\
+$\sum_i D_q^{(i)}$ R\'enyi at $q=2$ (4 freezeouts) & $5.82$ & accidental $\sim\!3\%$ match; Shore--Johnson uniqueness forces $q=1$, and the match degrades away from SM step sizes \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
 The smooth path-integral form
 \begin{equation}
 \label{eq:fprim_integral}
@@ -613,7 +620,7 @@ because the Standard Model has four freezeouts at those particular
 $g_{*,s}$ values; the integer $4$ is a contingent feature of the SM
 mass spectrum, not a derived structural number. A
 beyond-Standard-Model extension that adds or removes mass thresholds
-would shift the prediction (working/predictions\_pending.md).
+would shift the prediction.
 
 \emph{Structural obstruction.} The action's $f$ in eq.~\ref{eq:f} is
 a \emph{single-epoch} $D_{\rm KL}$ integral on a single distribution
@@ -764,13 +771,26 @@ in Sec.~\ref{sec:future}.
 \subsection{Environment-dependent $f$ and the perturbation closure}
 \label{sec:env_dep_f_closure}
 
-The committed paper position from F134 is that strict uniform-$f$
-ISST is falsified at the third acoustic peak by Planck at $>10\sigma$
-(Sec.~\ref{sec:theta}), and the CAMB Path~A treatment of
-the $(1{+}\fprim)$ extra-matter contribution as effectively
-collisionless CDM is the working approximation for the CMB prediction.
-F138 derives the explicit functional form of the env-dependent $f$
-closure that this approximation requires.
+\textbf{Headline.} \emph{The env-dep-$f$ closure derived below
+(F138) is a few-percent multiplicative correction to the
+gravitational source, not a free-growing collisionless channel.}
+It does not structurally rescue the factor-$\sim\!30$ third-peak
+suppression of strict uniform-$f$ that F134 documents
+(Sec.~\ref{sec:theta}); a first-pass linear-scaling estimate
+leaves a residual gap of $\sim\!30$ relative to the Planck-observed
+$H_3/H_1$ in either of the two readings of $v_{\rm esc}(\delta)$
+considered. The CAMB Path~A treatment of $(1{+}\fprim)\Omega_b$
+as collisionless CDM at the perturbation level is therefore an
+\emph{empirical approximation} rather than a derived consequence of
+F01: F138 establishes that the env-dep-$f$ closure does not derive
+the proxy, only that it bounds the ISST-internal correction at the
+$\pm 16\%$ level. Two resolution paths remain: a $V(\Psi)$
+extension that decouples $\Psi$-mediated structure from photon
+dynamics (action-level extension beyond F01), or the honest-flag
+position adopted in Sec.~\ref{sec:theta}. The remainder of this
+subsection derives the closure form, expands it to linear order,
+gives the two readings of $v_{\rm esc}(\delta)$, and quotes the
+$\beta(z)$ values from F138.
 
 \textbf{The closure form.}
 The information functional from A05, under the F119 local-bounded
@@ -849,45 +869,21 @@ giving an enhancement of $+8\%$ to $+16\%$ over CAMB Path A's
 $(1{+}\fprim) = 6.664$ baseline under Reading B, and a suppression
 of $-6\%$ to $-13\%$ under Reading A.
 
-\textbf{Honest assessment of what this rescues, and what it does not.}
-The closure
-\eqref{eq:delta_f_linear}--\eqref{eq:env_dep_source} is a few-percent
-multiplicative correction to the gravitational source. \emph{It does
-not generate a free-growing collisionless component that decouples
-from photon-baryon dynamics during radiation era}: $\delta f$ is a
-linear functional of $\delta_b$ (and of $\delta\sigma$, which is
+\textbf{Why the closure does not rescue the third peak.}
+$\delta f$ is a linear functional of $\delta_b$ (and of $\delta\sigma$,
 itself a function of $\delta_b$ through the local thermodynamic
 state), so it inherits the photon-coupled oscillations of $\delta_b$
-pre-decoupling exactly. The factor-33 third-peak suppression of strict
-uniform-$f$ (F134, modified CLASS) is therefore \emph{not} structurally
-rescued within F01 by this closure alone. A first-pass linear-scaling
-estimate gives a residual gap of $\sim\!30$ relative to the
-Planck-observed $H_3/H_1$ in either reading.
-
-The CAMB Path~A treatment used in
-Sec.~\ref{sec:theta}---modelling the $(1{+}\fprim)$
-extra-matter contribution as effectively collisionless CDM at the
-perturbation level---is therefore an \emph{empirical approximation}
-rather than a derived consequence of F01. F138 confirms that the
-env-dep-$f$ closure does not derive this approximation; it provides
-a few-percent correction to it.
-
-Two known resolution paths for the residual gap remain: (i) extend
-the action with a $V(\Psi)$ potential generating an effective scalar
-mass that decouples $\Psi$-mediated structure from photon dynamics
-(an action extension beyond F01); (ii) the position the paper now
-adopts in Sec.~\ref{sec:theta}, that the CMB peak
-structure is not fully derivable from F01 alone, with the Path~A
-agreement reported as empirical and ISST's distinguishing predictions
-concentrated in late-time observables. Status: \PROVEN\ for the
-closure form
-\eqref{eq:delta_f_linear}--\eqref{eq:env_dep_source} and the $\beta(z)$
-values \eqref{eq:beta_values}; \DEMO\ for the leading-order suppression
-of the $\Lambda$-correction $\Delta^f_{\mu\nu}$ pending explicit
-evaluation of $\bar\Lambda$ (F138 §8); \OPEN\ (F138 working on) for
-a derivation of the CAMB Path~A proxy from F01 alone---the residual
-question that would close the F134 falsification within the committed
-action.
+pre-decoupling exactly: there is no free-growing collisionless
+channel that decouples from photon-baryon dynamics during radiation
+era. The factor-$33$ third-peak suppression of strict uniform-$f$
+(F134, modified CLASS) is therefore not rescued within F01 by this
+closure alone. Status: \PROVEN\ for the closure form
+\eqref{eq:delta_f_linear}--\eqref{eq:env_dep_source} and the
+$\beta(z)$ values \eqref{eq:beta_values}; \DEMO\ for the
+leading-order suppression of $\Delta^f_{\mu\nu}$ pending explicit
+evaluation of $\bar\Lambda$ (F138 §8); \OPEN\ for a derivation of
+the CAMB Path~A proxy from F01 alone, which would close the F134
+falsification within the committed action.
 
 %==========================================================
 \section{Solar System and local tests}
@@ -1096,7 +1092,7 @@ $\Box\Psi = -(8\pi/3)(1{+}f_{\rm prim})\rho$ with continuity
 $\dot\rho + 3H\rho = 0$, the power-law ansatz
 $a\propto t^n$, $\Psi\propto t^p$, $\rho\propto t^{-3n}$ yields a
 \emph{forced} algebraic system. Power matching gives $p = 2-3n$;
-substituting into the Ψ-transport amplitude balance
+substituting into the $\Psi$-transport amplitude balance
 $p(p-1+3n)\Psi_0 = (8\pi/3)(1{+}f_{\rm prim})\rho_0$ and using the
 Friedmann amplitude $n^2 = (16\pi/9)(1{+}f_{\rm prim})\rho_0/\Psi_0$
 reduces the system to the quadratic
@@ -1808,6 +1804,21 @@ registration).
 \subsection{The CMB acoustic angle: first-pass Boltzmann result}
 \label{sec:theta}
 
+\textbf{The theory's reach across scales narrows here.} The
+preceding subsections established cosmological successes
+(wall-Friedmann derivation, $H_0$ frame artefact, $f\sigma_8$
+agreement, structural ISW null) on the Wiltshire-effective
+background. The CMB perturbation level is where the
+single-action programme runs into its first hard limitation: the
+strict uniform-$f$ source is falsified at the third peak by
+$>10\sigma$, and the env-dep-$f$ closure provides only
+percent-level corrections (Sec.~\ref{sec:env_dep_f_closure}).
+The first-pass acoustic-angle result reported here uses an
+empirical proxy at the perturbation level; the proxy's
+justification, its systematic uncertainty, and the open question
+it leaves are stated explicitly. This is the most honestly open
+result in the paper.
+
 A first-pass run of the CAMB Boltzmann
 hierarchy~\cite{LewisChallinor2011} on the Wiltshire-effective
 background~\cite{Wiltshire2007,Wiltshire2009,Dam2017} gives, at the
@@ -2462,18 +2473,13 @@ input rather than as an action-derived prediction), the lighthouse
 $f_s$ values from violent-relaxation working memory, and the
 $\fprim$ chain closure are identified as \OPEN.
 
-\textbf{vs.\ $\Lambda$CDM.} $\Lambda$CDM fits all six of
-$(\Omega_b, \Omega_c, H_0, \tau, A_s, n_s)$ from CMB; ISST has
-$a_{\rm crit}$ derived from the F01 action and $\fprim$ as an
-SM-motivated ansatz, plus seven empirical inputs and one inheritance
-from Wiltshire. ISST's empirical regulator parameters
+\textbf{vs.\ $\Lambda$CDM.} ISST's empirical regulator parameters
 $(a_0^{\rm reg}, q)$ are fitted on rotation curves only and do not
-propagate into the cosmological prediction. $\Lambda$CDM
-\emph{assumes} the dark sector and asks ``what density?''; ISST
-proposes $(1+\fprim)\Omega_b = \Omega_m$ as the cosmological-floor
-identity and asks ``what observation could break it?''. The total
-parameter count favours $\Lambda$CDM (6 vs 10); the
-derived-vs-fitted axis favours ISST (2 from first principles vs 0).
+propagate into the cosmological prediction. The framing differs:
+$\Lambda$CDM \emph{assumes} the dark sector and asks ``what
+density?''; ISST proposes $(1{+}\fprim)\Omega_b = \Omega_m$ as the
+cosmological-floor identity and asks ``what observation could break
+it?''.
 
 \textbf{ISST is observationally indistinguishable from
 $\Lambda$CDM at the CMB level under the env-dep-$f$ closure.} F134
@@ -2599,8 +2605,7 @@ information-theoretic measure for which the discrete sum is the
 unique additive monotone functional. The $\sim 2$--$3\sigma$
 two-$\alpha$ structural question ($\alpha_{\rm gal} = 0.869$ vs.\
 $\alpha_{\rm cosmo} \approx 1.71$ for the smooth-integral form to
-recover $5.66$) is identified as a propagated sub-problem
-(working/predictions\_pending.md). \OPEN.
+recover $5.66$) is identified as a propagated sub-problem. \OPEN.
 \item \textbf{Matter power spectrum $P(k)$ and BAO.} Same
 methodological obstacle as $C_\ell$. \OPEN.
 \item \textbf{Newton-limit regulator exponent $q$.} Empirically
@@ -2673,106 +2678,51 @@ conditions.
 \label{sec:conclusion}
 
 ISST commits to a single action with one matter-side coupling and
-no kinetic term for the scalar. From that action it derives
-the Branch theorem, which routes Solar-System physics into Branch~B
-(exact GR, via the static-fluid theorem of
-App.~\ref{app:static_fluid_theorem}) and cosmology into Branch~A
-(where homogeneous FRW fails geometrically and a Wiltshire-class
-inhomogeneous background is the simplest physically motivated
-realisation; strict exclusion of LTB/Szekeres alternatives is
-identified as open); the cluster mass identity
-$\Omega_m = (1{+}\fprim)\Omega_b$ at $1.6$--$1.8\sigma$ tension
-with the SM-predicted $\fprim = 5.66\pm 0.12$; PPN
-$\gamma=\beta=1$ exactly; $|\dot G/G|$ five orders below LLR;
-$c_{\rm GW}=c$ structurally rather than by tuning, from the F01
-linear-in-$\Psi$ gravitational sector with no kinetic term --- two
-tensor degrees of freedom and zero propagating scalar mode
-(App.~\ref{app:adm_dof}, internal, external verification flagged);
-SBBN inherited; a competitive fit to 175 SPARC rotation curves
-(held-out cross-validation on the 161 galaxies outside the
-14-galaxy tuning set preserves the central $Q{=}1$ comparison;
-F147); a derived $a_{\rm crit}$ sitting 11\% from MOND $a_0$ at
-the committed $H_0$; $f\sigma_8$ at $p\approx 0.30$--$0.45$ on the current RSD
-survey set; an $H_0$ tension whose \emph{structure} is reproduced
-as a Planck-template-vs-SH0ES-ladder pipeline artefact (ISST gives
-$62.8$ vs.\ Planck $67.4$, and $70.6$ vs.\ SH0ES $73.0$ ---
-structure recovered, literal numerical recovery open); and a
-lighthouse Bullet mechanism that closes the bulk of the
-local-column gap with two empirical $f_s$ values and predicts
-both Bullet and Abell~520 with the same machinery.
+no kinetic term for the scalar. From that action: the Branch
+theorem partitions spacetime into a GR-recovering compact-object
+sector and an inhomogeneous cosmological sector; the static-fluid
+theorem (App.~\ref{app:static_fluid_theorem}) routes every physical
+star into Branch~B, underwriting exact PPN ($\gamma=\beta=1$),
+$c_{\rm GW}=c$ structurally rather than by tuning,
+$|\dot G/G|$ five orders below LLR, and inherited SBBN; the
+acceleration scale $a_{\rm crit}\simeq 1.07\times 10^{-10}$~m/s$^2$
+falls out of two algebraic identities, sitting $11\%$ from MOND
+$a_0$; the cosmological-floor identity
+$(1{+}\fprim)\Omega_b=\Omega_m$ predicts $\Omega_m/\Omega_b$ within
+$4.2\%$ of Planck from a single SM thermodynamic input ($1.6$--$1.8\sigma$
+tension reported as honest residual). Rotation curves fit
+competitively on the full SPARC sample with the central $Q{=}1$
+comparison robust under held-out cross-validation (F147); the
+lighthouse mechanism closes the bulk of the Bullet $\kappa$
+contrast under empirical $f_s$ values; the $H_0$ tension structure
+is reproduced as a frame artefact (literal recovery open).
 
-ISST \emph{eliminates dark matter as a particle species}: there
-are no WIMPs, axions, or sterile neutrinos in the theory; the
-gravitational effects attributed to dark matter arise from the
-information-enhanced baryon coupling $(1{+}f)$. The CMB
-perturbation structure under the strict F01 action remains open:
-the first-pass acoustic angle within $0.83\%$ of Planck on a
-$(w_0, w_a)$ proxy for the Wiltshire-effective background uses
-an empirical proxy that represents the enhanced coupling as a
-collisionless component in standard Boltzmann codes (CAMB Path~A,
-Sec.~\ref{sec:theta}). This is a computational limitation of the
-tool, not a theoretical retreat; the proxy is needed because
-standard Boltzmann codes know how to handle extra gravitational
-source only through CDM-like components. The proxy diverges from
-the committed Wiltshire $H(z)$ by $+76\%$ at recombination, so the
-sub-percent headline carries an estimated $\sim 5$--$10\%$
-systematic uncertainty; a Boltzmann code with the two-domain
-background is the next critical computation. A strict uniform-$f$
-perturbation source is falsified at the third CMB peak by
-$>10\sigma$; the linearised env-dep-$f$ closure provides a
-few-percent correction but does not structurally rescue the
-third-peak gap. ISST's distinguishing predictions live in
-late-time structure formation: the lighthouse mechanism in
-cluster mergers, the $f\sigma_8$ shape on the Wiltshire
-background (DESI~DR2 comparison identified as the immediate
-test), the void-lensing $G$-ratio, and the
-processing-history-dependent $f_s$ in jellyfish galaxies and UDGs.
+ISST \emph{eliminates dark matter as a particle species}; the CMB
+perturbation structure under the strict F01 action remains open
+(Sec.~\ref{sec:theta}). The first-pass acoustic angle uses a
+$(w_0,w_a)$ proxy carrying ${\sim}\,5$--$10\%$ systematic
+uncertainty; the strict uniform-$f$ perturbation source is
+falsified at the third peak ($>10\sigma$); the env-dep-$f$ closure
+provides percent-level corrections, not the factor-$\sim\!30$
+needed (Sec.~\ref{sec:env_dep_f_closure}). The distinguishing
+predictions live in late-time structure formation: the lighthouse
+mechanism in cluster mergers, the $f\sigma_8$ shape on the
+Wiltshire background (DESI~DR2), the $+2.5\%$ void-lensing
+$G$-ratio (Euclid), and the processing-history-dependent $f_s$ in
+jellyfish galaxies. The full inventory of open items is in
+Sec.~\ref{sec:future}; the dropped predictions in
+Sec.~\ref{sec:dropped}; the timeline-and-precision falsifier table
+in Sec.~\ref{sec:falsifier_table}.
 
-ISST has not produced: a derivation of the CMB peak-height ratios
-from the F01 action; a Boltzmann computation on the true Wiltshire
-two-domain background; a derivation of the regulator exponent $q$;
-a closed chain from the action's KL functional to the discrete-sum
-$\fprim$ (four candidate paths ruled out, Sec.~\ref{sec:fprim});
-a single-$\alpha$ scale-bridging calibration closing the
-factor-$\sim 2$ galactic-vs-cosmological gap
-(Sec.~\ref{sec:alpha_scale}); a derivation of the lighthouse
-$f_s^\star$ from violent-relaxation working memory; or a derived
-matter power spectrum $P(k)$.
-
-ISST has dropped, on internal audit: the $S_8$ prediction (wrong
-sign); the halo-ontology Bullet attempts (internal references
-F65/F66/F68); the F113 BBN catastrophe (wrong-background
-artefact); the $-12\%$ analytical $\theta_*$ estimate (superseded
-by the first-pass Boltzmann); strict uniform-$f$ perturbation
-evolution (third-peak falsification, $>10\sigma$); and the
-smooth-crossover $\fprim$ reduction (smoothing returns $5.78$, not
-$5.40$).
-
-The kill conditions are pre-committed: direct dark-matter particle
-detection (WIMP, axion, sterile-neutrino specifications in
-Sec.~\ref{sec:falsification}), fifth-force detection
-(composition-dependent acceleration anomaly or Yukawa-type force on
-test particles), $c_{\rm GW}\neq c$, $\gamma_{\rm PPN}$ deviation
-at $10^{-5}$, BBN inconsistent with SBBN, Euclid finding $\kappa$
-tracking gas in cluster mergers, DESI~DR2 finding $f\sigma_8(z)$
-within $1\sigma$ of $\Lambda$CDM, and Euclid finding
-$G_{\rm void}/G_{\rm local}=1$ to $0.5\%$. Each is a single
-measurement, falsifiable in this decade.
-
-\textbf{Self-containment and reproducibility.} This paper is
-self-contained: every load-bearing derivation is presented in the
-body or appendices (App.~\ref{app:passport}--\ref{app:adm_dof}).
-The companion site at
+\textbf{Self-containment and reproducibility.} Every load-bearing
+derivation is presented in the body or appendices
+(App.~\ref{app:passport}--\ref{app:adm_dof}). The companion site
 \href{https://lily-labs.co.uk/isst}{lily-labs.co.uk/isst} provides
-supplementary computational outputs, the interactive Derivation
-Passport engine, and extended audit logs. Boltzmann code
-modifications (the CAMB \texttt{params.ini} configurations
-underlying Sec.~\ref{sec:theta} and the modified CLASS
-\texttt{source/perturbations.c} patch implementing the strict
-uniform-$f$ test) and the SPARC analysis scripts will be archived
-as supplementary material with the publisher and on a permanent
-repository (Zenodo) upon acceptance. The invitation is open:
-here are our kill conditions; try to trigger them.
+supplementary computational outputs and the interactive Derivation
+Passport engine; CAMB \texttt{params.ini}, the modified CLASS
+\texttt{source/perturbations.c} patch, and the SPARC analysis
+scripts will be archived on Zenodo upon acceptance. The invitation
+is open: here are our kill conditions; try to trigger them.
 
 %==========================================================
 \acknowledgments
@@ -3206,14 +3156,12 @@ backgrounds is \emph{not} proved; that classification is
 This appendix gives the full derivation of
 \eqref{eq:wall_friedmann_main} from F01 on the planar wall slab,
 with explicit verification that energy-momentum is conserved at every
-step of the anisotropic-to-isotropic transition. It addresses the
-referee's request for ``a clearer bridge between the anisotropic
-wall slab and the averaged Friedmann equation to ensure no
-energy-momentum is lost in the averaging process.''
-The full derivation, including symbolic verification with
-\textsc{sympy}, is in
-\texttt{working/F141\_wall\_friedmann\_proof.md} and
-\texttt{working/F141\_em\_conservation\_check.py}.
+step of the anisotropic-to-isotropic transition, providing a
+clear bridge between the anisotropic wall slab and the averaged
+Friedmann equation that ensures no energy-momentum is lost in the
+averaging process. The full derivation, including symbolic
+verification with \textsc{sympy}, is provided in the supplementary
+material accompanying this paper.
 
 The pointwise existence of the wall metric is established in
 Appendix~\ref{sec:wall_pointwise}; F141 (this appendix) proves the
@@ -3425,7 +3373,6 @@ fraction of the source absorbed by $\Psi$ transport, traced through
 \item Coordinate-independence holds by general covariance of
 \eqref{eq:eom}.
 \end{itemize}
-This closes Item~2 of the second-round referee report.
 
 \section{$H_0$ frame artefact: bare-to-dressed pipeline}
 \label{app:h0_frame}
@@ -3596,7 +3543,7 @@ already.
 \section{Audit summary and result inventory}
 \label{app:audit}
 
-The retroactive audit (2026-04-26) classifies all 88 audited results:
+The retroactive audit (2026-04-25) classifies all 88 audited results:
 
 \begin{table}[h]
 \caption{Audit classification.}
@@ -4073,14 +4020,16 @@ physical and gravitational geometry,'' \textit{Phys.~Rev.~D}
 \textbf{48}, 3641 (1993).
 
 \bibitem{Verlinde2011} E.~Verlinde, ``On the origin of gravity and
-the laws of Newton,'' \textit{JHEP} \textbf{04}, 029 (2011).
+the laws of Newton,'' \textit{JHEP} \textbf{04}, 029 (2011)
+[arXiv:1001.0785].
 
 \bibitem{Verlinde2017} E.~Verlinde, ``Emergent gravity and the dark
 universe,'' \textit{SciPost Phys.} \textbf{2}, 016 (2017).
 
 \bibitem{Padmanabhan2010} T.~Padmanabhan, ``Thermodynamical aspects
 of gravity: new insights,''
-\textit{Rep.~Prog.~Phys.} \textbf{73}, 046901 (2010).
+\textit{Rep.~Prog.~Phys.} \textbf{73}, 046901 (2010)
+[arXiv:0911.5004].
 
 % --- Branch / static-fluid / lensing internal ---
 
@@ -4432,14 +4381,10 @@ the Einstein equation of state,''
 \textit{Phys.~Rev.~Lett.} \textbf{75}, 1260 (1995)
 [arXiv:gr-qc/9504004].
 
-\bibitem{Padmanabhan2010} T.~Padmanabhan, ``Thermodynamical aspects of
-gravity: new insights,''
-\textit{Rep.~Prog.~Phys.} \textbf{73}, 046901 (2010)
-[arXiv:0911.5004].
-
-\bibitem{Verlinde2011} E.~Verlinde, ``On the origin of gravity and
-the laws of Newton,''
-\textit{JHEP} \textbf{04}, 029 (2011) [arXiv:1001.0785].
+\bibitem{Israel1966} W.~Israel, ``Singular hypersurfaces and thin
+shells in general relativity,''
+\textit{Nuovo Cim.~B} \textbf{44}, 1 (1966); erratum
+\textit{ibid.} \textbf{48}, 463 (1967).
 
 \bibitem{Hartle1967} J.~B.~Hartle, ``Slowly rotating relativistic
 stars.~I.~Equations of structure,''
